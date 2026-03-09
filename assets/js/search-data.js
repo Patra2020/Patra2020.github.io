@@ -435,51 +435,46 @@ ninja.data = [{
           section: "News",},{id: "news-celebrating-my-first-first-author-paper-accepted-at-eacl-2026",
           title: 'Celebrating my first first-author paper, accepted at EACL 2026 🎉',
           description: "",
-          section: "News",},{id: "projects-project-1",
-          title: 'project 1',
-          description: "with background image",
+          section: "News",},{id: "projects-math-prover-reasoning-with-prms",
+          title: 'Math Prover Reasoning with PRMs',
+          description: "Bridging formal Lean4 theorem provers with informal reasoning using process-level reward models — UCSD Rose-STL Lab.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
-            },},{id: "projects-project-2",
-          title: 'project 2',
-          description: "a project with a background image and giscus comments",
+            },},{id: "projects-speculative-tool-invocation-for-faster-llm-reasoning",
+          title: 'Speculative Tool Invocation for Faster LLM Reasoning',
+          description: "Speculator–Actor architecture for accelerating tool-augmented LLM agents, benchmarked on GAIA — UCSD WukLab.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
-            },},{id: "projects-project-3-with-very-long-name",
-          title: 'project 3 with very long name',
-          description: "a project that redirects to another website",
+            },},{id: "projects-code-switched-speech-language-identification",
+          title: 'Code-Switched Speech Language Identification',
+          description: "PEFT-based multilingual speech LID with improved embedded English detection — accepted at EACL 2026.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_project/";
-            },},{id: "projects-project-4",
-          title: 'project 4',
-          description: "another without an image",
+            },},{id: "projects-asr-for-dysarthric-speech",
+          title: 'ASR for Dysarthric Speech',
+          description: "Test-time adaptation of Wav2Vec2 for speech pathologies using SUTA, achieving strong WER improvements on dysarthric speakers.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/4_project/";
-            },},{id: "projects-project-5",
-          title: 'project 5',
-          description: "a project with a background image",
+            },},{id: "projects-dynamic-agentic-rag",
+          title: 'Dynamic Agentic RAG',
+          description: "Gold Medal at InterIIT Tech Meet 13.0 — a LangGraph-based agentic RAG system with critic-generator architecture for multi-hop financial reasoning.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/5_project/";
-            },},{id: "projects-project-6",
-          title: 'project 6',
-          description: "a project with no image",
+            },},{id: "projects-rlhf-with-rewrite-feedback",
+          title: 'RLHF with Rewrite Feedback',
+          description: "Training reward models on synthetic rewrite-based preference datasets to align LLMs using fine-grained, edit-level human feedback signals.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/6_project/";
-            },},{id: "projects-project-7",
-          title: 'project 7',
-          description: "with background image",
+            },},{id: "projects-llama-safety-mechanism-bypass",
+          title: 'Llama Safety Mechanism Bypass',
+          description: "Mechanistic analysis of Llama&#39;s refusal behavior via neuron activation patching and refusal direction discovery, with TAR safety evaluation.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/7_project/";
-            },},{id: "projects-project-8",
-          title: 'project 8',
-          description: "an other project with a background image and giscus comments",
+            },},{id: "projects-graph-based-retrieval-and-contrastive-learning",
+          title: 'Graph-based Retrieval and Contrastive Learning',
+          description: "Stance-aware sentence transformers and a graph-of-passages architecture for multi-hop QA, trained with contrastive learning objectives.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/8_project/";
-            },},{id: "projects-project-9",
-          title: 'project 9',
-          description: "another project with an image 🎉",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/9_project/";
             },},{
         id: 'social-cv',
         title: 'CV',
