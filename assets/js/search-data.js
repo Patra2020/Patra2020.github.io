@@ -475,6 +475,11 @@ ninja.data = [{
           description: "Stance-aware sentence transformers and a graph-of-passages architecture for multi-hop QA, trained with contrastive learning objectives.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/8_project/";
+            },},{id: "projects-semantically-cohesive-word-grouping-in-indic-languages",
+          title: 'Semantically Cohesive Word Grouping in Indic Languages',
+          description: "Novel word-grouping strategy for cross-lingual syntactic alignment in Indic NLP, improving Hindi-to-Indic MT BLEU by 3.5% — BharatGen, IIT Bombay.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/9_project/";
             },},{
         id: 'social-cv',
         title: 'CV',
