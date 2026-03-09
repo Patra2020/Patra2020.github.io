@@ -11,7 +11,8 @@ category: Core Research
 Automatic speech recognition systems perform poorly on speakers with dysarthria and other speech pathologies, largely because standard training data does not capture the high variability in articulation, rhythm, and phonation that these speakers exhibit. This project addresses that gap using **Speaker-Specific Unsupervised Test-time Adaptation (SUTA)** applied to Wav2Vec2, a state-of-the-art self-supervised speech encoder.
 
 Rather than retraining the model from scratch — which is infeasible given the scarcity of labeled pathological speech — SUTA adapts the model at test time using the target speaker's own unlabeled audio. By optimizing entropy-based objectives over the model's intermediate representations during inference, the system rapidly shifts its acoustic prior toward the speaker's distribution. Our experiments demonstrate substantial **Word Error Rate (WER) reductions** across multiple dysarthric speakers, with particularly strong gains for severely affected speakers, pointing toward more accessible and adaptive ASR systems for clinical and assistive technology applications.
-<!-- 
+
+<!--
     ---
     layout: page
     title: project

@@ -8,10 +8,11 @@ category: Core Research
 
 **UCSD – WukLab &nbsp;|&nbsp; Sept 2025 – Dec 2025**
 
-Tool-augmented LLM agents incur significant latency because every tool call requires a full forward pass to decide *which* tool to invoke and *when*. This project introduces a **Speculator–Actor architecture** that decouples tool-call prediction from execution: a lightweight speculator model proposes tool invocations ahead of time, while the main actor LLM verifies and executes them, amortizing latency across reasoning steps.
+Tool-augmented LLM agents incur significant latency because every tool call requires a full forward pass to decide _which_ tool to invoke and _when_. This project introduces a **Speculator–Actor architecture** that decouples tool-call prediction from execution: a lightweight speculator model proposes tool invocations ahead of time, while the main actor LLM verifies and executes them, amortizing latency across reasoning steps.
 
 The speculator is trained via **distillation from Gemini-generated agent trajectories** on the GAIA benchmark — a challenging suite of multi-step, tool-dependent reasoning tasks. By learning the tool-use patterns of a stronger model, the speculator achieves high acceptance rates with far lower compute. Experiments on GAIA show meaningful reductions in end-to-end latency without sacrificing task accuracy, demonstrating that speculative execution principles from systems research can translate effectively into agentic ML settings.
-<!-- 
+
+<!--
     <!-- ---
     layout: page
     title: project

@@ -11,7 +11,8 @@ category: Core Research
 Code-switching — the fluid alternation between languages within a single utterance — poses a fundamental challenge for speech language identification (LID) systems, which typically assume monolingual input. This work targets the particularly difficult case of **embedded English detection** in Indic code-switched speech, where English words and phrases are interspersed within a dominant non-English language.
 
 We adapt large pretrained multilingual speech models using **Parameter-Efficient Fine-Tuning (PEFT)** techniques — specifically LoRA and adapter modules — to minimize catastrophic forgetting while specializing for code-switched distributions. By training on carefully curated multilingual datasets with code-switched annotations, the model learns to identify rapid language switches at the frame and segment level. Our approach yields significant improvements in embedded English detection accuracy over strong baselines, demonstrating that lightweight adaptation of pretrained speech encoders is both effective and efficient for low-resource, code-switched LID.
-<!-- 
+
+<!--
     ---
     layout: page
     title: project
