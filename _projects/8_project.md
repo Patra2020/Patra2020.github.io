@@ -6,12 +6,12 @@ importance: 4
 category: Advanced ML / AI
 ---
 
-**Information Retrieval & Representation Learning &nbsp;|&nbsp; IIT Bombay**
+**Information Retrieval & Representation Learning | IIT Bombay**
 
 Multi-hop question answering requires retrieving and reasoning over multiple evidence passages whose relevance is often indirect and stance-dependent. This project builds a **graph-of-passages** retrieval architecture where passages are nodes and semantic or co-referential relationships form edges, enabling multi-hop traversal during inference.
 
 Retrieval is powered by **stance-aware sentence transformers** fine-tuned with **contrastive learning** — positive pairs are passages that together support the correct answer, while negatives are individually relevant but misleading passages. This trains the encoder to capture not just topical similarity but logical coherence across hops. The contrastive objective encourages representations where multi-hop chains cluster tightly, improving both retrieval recall and downstream answer extraction. The system shows strong performance on multi-hop QA benchmarks, demonstrating the value of structure-aware retrieval over flat dense retrieval.
-
+<!-- 
     ---
     layout: page
     title: project
@@ -76,4 +76,4 @@ Here's the code for the last row of images above:
 </div>
 ```
 
-{% endraw %}
+{% endraw %} -->

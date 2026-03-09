@@ -6,7 +6,7 @@ importance: 3
 category: Core Research
 ---
 
-**IIT Bombay &nbsp;|&nbsp; Accepted at EACL 2026**
+**IIT Bombay | CSALT Lab | Accepted at EACL 2026**
 
 Code-switching — the fluid alternation between languages within a single utterance — poses a fundamental challenge for speech language identification (LID) systems, which typically assume monolingual input. This work targets the particularly difficult case of **embedded English detection** in Indic code-switched speech, where English words and phrases are interspersed within a dominant non-English language.
 
@@ -77,4 +77,4 @@ Here's the code for the last row of images above:
 </div>
 ``` -->
 
-{% endraw %}
+<!-- {% endraw %} -->

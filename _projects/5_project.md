@@ -6,13 +6,13 @@ importance: 1
 category: Advanced ML / AI
 ---
 
-**InterIIT Tech Meet 13.0 &nbsp;|&nbsp; Gold Medal 🥇**
+**InterIIT Tech Meet 13.0 | Gold Medal 🥇**
 
 Built for the InterIIT Tech Meet 13.0 problem statement on complex financial question answering, this system goes beyond standard RAG by framing retrieval as a **dynamic, multi-step agent loop** orchestrated with LangGraph. A **query decomposer** breaks multi-hop financial questions into atomic sub-queries, each resolved through targeted retrieval. A **critic–generator architecture** then iteratively evaluates intermediate answers, triggering re-retrieval or re-generation when the critic deems the response incomplete or inconsistent.
 
 The system handles long-horizon reasoning over financial documents — earnings reports, filings, tables — where single-pass retrieval reliably fails. The LangGraph backbone enables stateful, conditional branching across decomposition, retrieval, generation, and critique steps. This project won the Gold Medal at InterIIT, demonstrating strong end-to-end performance on multi-hop financial queries.
-
-    ---
+<!-- 
+    <!-- ---
     layout: page
     title: project
     description: a project with a background image
@@ -63,7 +63,7 @@ Just wrap your images with `<div class="col-sm">` and place them inside `<div cl
 To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
 Here's the code for the last row of images above: -->
 
-{% raw %}
+<!-- {% raw %}
 
 ```html
 <div class="row justify-content-sm-center">
@@ -76,4 +76,4 @@ Here's the code for the last row of images above: -->
 </div>
 ```
 
-{% endraw %}
+{% endraw %} -->

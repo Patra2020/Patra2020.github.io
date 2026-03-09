@@ -6,13 +6,13 @@ importance: 2
 category: Advanced ML / AI
 ---
 
-**Reinforcement Learning from Human Feedback &nbsp;|&nbsp; IIT Bombay**
+**Reinforcement Learning from Human Feedback | IIT Bombay**
 
 Standard RLHF relies on binary preference labels (response A vs. B), which provide weak supervision and are expensive to collect at scale. This project explores a richer feedback signal: **rewrite-based preferences**, where annotators improve a response directly rather than simply ranking two outputs. The delta between original and rewritten responses encodes fine-grained information about what is wrong and how to fix it.
 
 We construct **synthetic preference datasets** by prompting a strong LLM to rewrite lower-quality responses, then train a **reward model** that scores responses based on alignment with rewrite-inferred preferences. The trained reward model is used in a PPO-style RL loop to fine-tune a base LLM. This approach yields better reward signal density than binary comparisons and naturally captures edit-level feedback — connecting to broader interests in process-level supervision and reasoning-aware alignment.
-
-    ---
+<!-- 
+    <!-- ---
     layout: page
     title: project
     description: a project with a background image
@@ -76,4 +76,4 @@ Here's the code for the last row of images above:
 </div>
 ```
 
-{% endraw %}
+{% endraw %} --> -->

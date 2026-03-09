@@ -6,7 +6,7 @@ importance: 2
 category: Core Research
 ---
 
-**UCSD – WukLab &nbsp;|&nbsp; Sept 2025 – Dec 2025**
+**UCSD – WukLab**
 
 Tool-augmented LLM agents incur significant latency because every tool call requires a full forward pass to decide _which_ tool to invoke and _when_. This project introduces a **Speculator–Actor architecture** that decouples tool-call prediction from execution: a lightweight speculator model proposes tool invocations ahead of time, while the main actor LLM verifies and executes them, amortizing latency across reasoning steps.
 
@@ -75,6 +75,6 @@ Here's the code for the last row of images above:
     {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
-``` --> -->
+<!-- ``` --> --> -->
 
-{% endraw %}
+<!-- {% endraw %} -->
