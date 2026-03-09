@@ -7,6 +7,7 @@ category: Core Research
 ---
 
 **UCSD – WukLab**
+_Advised by [Prof. Yiying Zhang](https://cseweb.ucsd.edu/~yiying/) (UCSD)_
 
 Tool-augmented LLM agents incur significant latency because every tool call requires a full forward pass to decide _which_ tool to invoke and _when_. This project introduces a **Speculator–Actor architecture** that decouples tool-call prediction from execution: a lightweight speculator model proposes tool invocations ahead of time, while the main actor LLM verifies and executes them, amortizing latency across reasoning steps.
 

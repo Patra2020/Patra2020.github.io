@@ -7,6 +7,7 @@ category: Core Research
 ---
 
 **IIT Bombay | CSALT Lab | Accepted at EACL 2026**
+_Advised by [Prof. Preethi Jyothi](https://www.cse.iitb.ac.in/~pjyothi/) (IIT Bombay)_
 
 Code-switching — the fluid alternation between languages within a single utterance — poses a fundamental challenge for speech language identification (LID) systems, which typically assume monolingual input. This work targets the particularly difficult case of **embedded English detection** in Indic code-switched speech, where English words and phrases are interspersed within a dominant non-English language.
 

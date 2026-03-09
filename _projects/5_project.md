@@ -11,7 +11,8 @@ category: Advanced ML / AI
 Built for the InterIIT Tech Meet 13.0 problem statement on complex financial question answering, this system goes beyond standard RAG by framing retrieval as a **dynamic, multi-step agent loop** orchestrated with LangGraph. A **query decomposer** breaks multi-hop financial questions into atomic sub-queries, each resolved through targeted retrieval. A **critic–generator architecture** then iteratively evaluates intermediate answers, triggering re-retrieval or re-generation when the critic deems the response incomplete or inconsistent.
 
 The system handles long-horizon reasoning over financial documents — earnings reports, filings, tables — where single-pass retrieval reliably fails. The LangGraph backbone enables stateful, conditional branching across decomposition, retrieval, generation, and critique steps. This project won the Gold Medal at InterIIT, demonstrating strong end-to-end performance on multi-hop financial queries.
-<!-- 
+
+<!--
     <!-- ---
     layout: page
     title: project

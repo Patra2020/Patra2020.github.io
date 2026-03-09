@@ -11,7 +11,8 @@ category: Advanced ML / AI
 Large language models like Llama employ safety fine-tuning to refuse harmful requests, but the internal mechanisms underlying this behavior remain poorly understood. This project takes a **mechanistic interpretability** approach to identify and manipulate the neural structures responsible for refusal.
 
 Using **activation patching** across model layers, we localize the **refusal direction** — a geometric subspace in the model's residual stream that governs whether a response is blocked or generated. By surgically editing neuron activations along this direction at inference time, we demonstrate that safety guardrails can be bypassed without any weight modification. We further evaluate the robustness of **TAR (Targeted Adversarial Robustness)** safety training against these activation-level attacks, finding that representation-space interventions expose vulnerabilities that token-level jailbreaks do not. This work has direct implications for understanding what RLHF-based safety actually learns — and what it fails to protect.
-<!-- 
+
+<!--
     <!-- ---
     layout: page
     title: project

@@ -7,6 +7,7 @@ category: Core Research
 ---
 
 **IIT Bombay – CSALT Lab**
+_Advised by [Prof. Preethi Jyothi](https://www.cse.iitb.ac.in/~pjyothi/) (IIT Bombay)_
 
 Automatic speech recognition systems perform poorly on speakers with dysarthria and other speech pathologies, largely because standard training data does not capture the high variability in articulation, rhythm, and phonation that these speakers exhibit. This project addresses that gap using **Speaker-Specific Unsupervised Test-time Adaptation (SUTA)** applied to Wav2Vec2, a state-of-the-art self-supervised speech encoder.
 
