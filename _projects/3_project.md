@@ -1,19 +1,17 @@
 ---
 layout: page
-title: project 3 with very long name
-description: a project that redirects to another website
-img: assets/img/7.jpg
-redirect: https://unsplash.com
+title: Code-Switched Speech Language Identification
+description: PEFT-based multilingual speech LID with improved embedded English detection — accepted at EACL 2026.
 importance: 3
-category: work
+category: Core Research
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+**IIT Bombay &nbsp;|&nbsp; Accepted at EACL 2026**
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+Code-switching — the fluid alternation between languages within a single utterance — poses a fundamental challenge for speech language identification (LID) systems, which typically assume monolingual input. This work targets the particularly difficult case of **embedded English detection** in Indic code-switched speech, where English words and phrases are interspersed within a dominant non-English language.
 
+We adapt large pretrained multilingual speech models using **Parameter-Efficient Fine-Tuning (PEFT)** techniques — specifically LoRA and adapter modules — to minimize catastrophic forgetting while specializing for code-switched distributions. By training on carefully curated multilingual datasets with code-switched annotations, the model learns to identify rapid language switches at the frame and segment level. Our approach yields significant improvements in embedded English detection accuracy over strong baselines, demonstrating that lightweight adaptation of pretrained speech encoders is both effective and efficient for low-resource, code-switched LID.
+<!-- 
     ---
     layout: page
     title: project
@@ -76,6 +74,6 @@ Here's the code for the last row of images above:
     {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
-```
+``` -->
 
 {% endraw %}

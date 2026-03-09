@@ -1,20 +1,18 @@
 ---
 layout: page
-title: project 2
-description: a project with a background image and giscus comments
-img: assets/img/3.jpg
+title: Speculative Tool Invocation for Faster LLM Reasoning
+description: Speculator–Actor architecture for accelerating tool-augmented LLM agents, benchmarked on GAIA — UCSD WukLab.
 importance: 2
-category: work
-giscus_comments: true
+category: Core Research
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+**UCSD – WukLab &nbsp;|&nbsp; Sept 2025 – Dec 2025**
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+Tool-augmented LLM agents incur significant latency because every tool call requires a full forward pass to decide *which* tool to invoke and *when*. This project introduces a **Speculator–Actor architecture** that decouples tool-call prediction from execution: a lightweight speculator model proposes tool invocations ahead of time, while the main actor LLM verifies and executes them, amortizing latency across reasoning steps.
 
-    ---
+The speculator is trained via **distillation from Gemini-generated agent trajectories** on the GAIA benchmark — a challenging suite of multi-step, tool-dependent reasoning tasks. By learning the tool-use patterns of a stronger model, the speculator achieves high acceptance rates with far lower compute. Experiments on GAIA show meaningful reductions in end-to-end latency without sacrificing task accuracy, demonstrating that speculative execution principles from systems research can translate effectively into agentic ML settings.
+<!-- 
+    <!-- ---
     layout: page
     title: project
     description: a project with a background image
@@ -76,6 +74,6 @@ Here's the code for the last row of images above:
     {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
-```
+``` --> -->
 
 {% endraw %}

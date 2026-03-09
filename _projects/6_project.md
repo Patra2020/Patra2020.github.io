@@ -1,17 +1,16 @@
 ---
 layout: page
-title: project 6
-description: a project with no image
-img:
-importance: 4
-category: fun
+title: RLHF with Rewrite Feedback
+description: Training reward models on synthetic rewrite-based preference datasets to align LLMs using fine-grained, edit-level human feedback signals.
+importance: 2
+category: Advanced ML / AI
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+**Reinforcement Learning from Human Feedback &nbsp;|&nbsp; IIT Bombay**
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+Standard RLHF relies on binary preference labels (response A vs. B), which provide weak supervision and are expensive to collect at scale. This project explores a richer feedback signal: **rewrite-based preferences**, where annotators improve a response directly rather than simply ranking two outputs. The delta between original and rewritten responses encodes fine-grained information about what is wrong and how to fix it.
+
+We construct **synthetic preference datasets** by prompting a strong LLM to rewrite lower-quality responses, then train a **reward model** that scores responses based on alignment with rewrite-inferred preferences. The trained reward model is used in a PPO-style RL loop to fine-tune a base LLM. This approach yields better reward signal density than binary comparisons and naturally captures edit-level feedback — connecting to broader interests in process-level supervision and reasoning-aware alignment.
 
     ---
     layout: page

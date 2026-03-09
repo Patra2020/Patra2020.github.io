@@ -1,18 +1,16 @@
 ---
 layout: page
-title: project 7
-description: with background image
-img: assets/img/4.jpg
-importance: 1
-category: work
-related_publications: true
+title: Llama Safety Mechanism Bypass
+description: Mechanistic analysis of Llama's refusal behavior via neuron activation patching and refusal direction discovery, with TAR safety evaluation.
+importance: 3
+category: Advanced ML / AI
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+**LLM Security & Interpretability &nbsp;|&nbsp; UCSD**
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+Large language models like Llama employ safety fine-tuning to refuse harmful requests, but the internal mechanisms underlying this behavior remain poorly understood. This project takes a **mechanistic interpretability** approach to identify and manipulate the neural structures responsible for refusal.
+
+Using **activation patching** across model layers, we localize the **refusal direction** — a geometric subspace in the model's residual stream that governs whether a response is blocked or generated. By surgically editing neuron activations along this direction at inference time, we demonstrate that safety guardrails can be bypassed without any weight modification. We further evaluate the robustness of **TAR (Targeted Adversarial Robustness)** safety training against these activation-level attacks, finding that representation-space interventions expose vulnerabilities that token-level jailbreaks do not. This work has direct implications for understanding what RLHF-based safety actually learns — and what it fails to protect.
 
     ---
     layout: page

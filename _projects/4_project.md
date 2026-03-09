@@ -1,18 +1,17 @@
 ---
 layout: page
-title: project 4
-description: another without an image
-img:
-importance: 3
-category: fun
+title: ASR for Dysarthric Speech
+description: Test-time adaptation of Wav2Vec2 for speech pathologies using SUTA, achieving strong WER improvements on dysarthric speakers.
+importance: 4
+category: Core Research
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+**IIT Bombay – CSALT Lab**
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+Automatic speech recognition systems perform poorly on speakers with dysarthria and other speech pathologies, largely because standard training data does not capture the high variability in articulation, rhythm, and phonation that these speakers exhibit. This project addresses that gap using **Speaker-Specific Unsupervised Test-time Adaptation (SUTA)** applied to Wav2Vec2, a state-of-the-art self-supervised speech encoder.
 
+Rather than retraining the model from scratch — which is infeasible given the scarcity of labeled pathological speech — SUTA adapts the model at test time using the target speaker's own unlabeled audio. By optimizing entropy-based objectives over the model's intermediate representations during inference, the system rapidly shifts its acoustic prior toward the speaker's distribution. Our experiments demonstrate substantial **Word Error Rate (WER) reductions** across multiple dysarthric speakers, with particularly strong gains for severely affected speakers, pointing toward more accessible and adaptive ASR systems for clinical and assistive technology applications.
+<!-- 
     ---
     layout: page
     title: project
@@ -75,6 +74,6 @@ Here's the code for the last row of images above:
     {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
-```
+``` -->
 
 {% endraw %}

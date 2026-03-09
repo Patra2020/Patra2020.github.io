@@ -1,17 +1,16 @@
 ---
 layout: page
-title: project 5
-description: a project with a background image
-img: assets/img/1.jpg
-importance: 3
-category: fun
+title: Dynamic Agentic RAG
+description: Gold Medal at InterIIT Tech Meet 13.0 — a LangGraph-based agentic RAG system with critic-generator architecture for multi-hop financial reasoning.
+importance: 1
+category: Advanced ML / AI
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+**InterIIT Tech Meet 13.0 &nbsp;|&nbsp; Gold Medal 🥇**
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+Built for the InterIIT Tech Meet 13.0 problem statement on complex financial question answering, this system goes beyond standard RAG by framing retrieval as a **dynamic, multi-step agent loop** orchestrated with LangGraph. A **query decomposer** breaks multi-hop financial questions into atomic sub-queries, each resolved through targeted retrieval. A **critic–generator architecture** then iteratively evaluates intermediate answers, triggering re-retrieval or re-generation when the critic deems the response incomplete or inconsistent.
+
+The system handles long-horizon reasoning over financial documents — earnings reports, filings, tables — where single-pass retrieval reliably fails. The LangGraph backbone enables stateful, conditional branching across decomposition, retrieval, generation, and critique steps. This project won the Gold Medal at InterIIT, demonstrating strong end-to-end performance on multi-hop financial queries.
 
     ---
     layout: page
@@ -59,10 +58,10 @@ You describe how you toiled, sweated, _bled_ for your project, and then... you r
     You can also have artistically styled 2/3 + 1/3 images, like these.
 </div>
 
-The code is simple.
+<!-- The code is simple.
 Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
 To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+Here's the code for the last row of images above: -->
 
 {% raw %}
 

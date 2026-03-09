@@ -1,18 +1,16 @@
 ---
 layout: page
-title: project 8
-description: an other project with a background image and giscus comments
-img: assets/img/9.jpg
-importance: 2
-category: work
-giscus_comments: true
+title: Graph-based Retrieval and Contrastive Learning
+description: Stance-aware sentence transformers and a graph-of-passages architecture for multi-hop QA, trained with contrastive learning objectives.
+importance: 4
+category: Advanced ML / AI
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+**Information Retrieval & Representation Learning &nbsp;|&nbsp; IIT Bombay**
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+Multi-hop question answering requires retrieving and reasoning over multiple evidence passages whose relevance is often indirect and stance-dependent. This project builds a **graph-of-passages** retrieval architecture where passages are nodes and semantic or co-referential relationships form edges, enabling multi-hop traversal during inference.
+
+Retrieval is powered by **stance-aware sentence transformers** fine-tuned with **contrastive learning** — positive pairs are passages that together support the correct answer, while negatives are individually relevant but misleading passages. This trains the encoder to capture not just topical similarity but logical coherence across hops. The contrastive objective encourages representations where multi-hop chains cluster tightly, improving both retrieval recall and downstream answer extraction. The system shows strong performance on multi-hop QA benchmarks, demonstrating the value of structure-aware retrieval over flat dense retrieval.
 
     ---
     layout: page
