@@ -435,9 +435,9 @@ ninja.data = [{
           section: "News",},{id: "news-celebrating-my-first-first-author-paper-accepted-at-eacl-2026",
           title: 'Celebrating my first first-author paper, accepted at EACL 2026 🎉',
           description: "",
-          section: "News",},{id: "projects-math-prover-reasoning-with-prms",
-          title: 'Math Prover Reasoning with PRMs',
-          description: "Bridging formal Lean4 theorem provers with informal reasoning using process-level reward models — UCSD Rose-STL Lab.",
+          section: "News",},{id: "projects-improving-reasoning-of-math-prover-models",
+          title: 'Improving Reasoning of Math Prover Models',
+          description: "Bridging the gap between formal and informal Math reasoning models — UCSD Rose-STL Lab.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
             },},{id: "projects-speculative-tool-invocation-for-faster-llm-reasoning",
