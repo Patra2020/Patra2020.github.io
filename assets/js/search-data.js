@@ -32,7 +32,7 @@ ninja.data = [{
           },
         },{id: "nav-cv",
           title: "cv",
-          description: "This is a description of the page. You can modify it in &#39;_pages/cv.md&#39;. You can also change or remove the top pdf download button.",
+          description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/cv/";
@@ -432,8 +432,8 @@ ninja.data = [{
           section: "News",},{id: "news-started-my-ms-in-computer-science-at-the-university-of-california-san-diego",
           title: 'Started my MS in Computer Science at the University of California, San Diego....',
           description: "",
-          section: "News",},{id: "news-celebrating-my-first-first-author-paper-accepted-at-eacl-2026",
-          title: 'Celebrating my first first-author paper, accepted at EACL 2026 🎉',
+          section: "News",},{id: "news-celebrating-my-first-first-author-paper-accepted-at-eacl-findings-2026",
+          title: 'Celebrating my first first-author paper, accepted at EACL(Findings) 2026 🎉',
           description: "",
           section: "News",},{id: "projects-improving-reasoning-of-math-prover-models",
           title: 'Improving Reasoning of Math Prover Models',
