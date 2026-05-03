@@ -10,4 +10,3 @@ category: Core Research
 _Advised by [Prof. Rose Yu](https://roseyu.com/) (UCSD)_
 
 Ongoing Project.
-
