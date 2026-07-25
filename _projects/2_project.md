@@ -23,7 +23,9 @@ _Advised by [Prof. Yiying Zhang](https://cseweb.ucsd.edu/~yiying/) (UCSD)_
 
 Large Language Model (LLM) agents rely on external tools (search, code interpreters, APIs) to perform multi-step reasoning. However, traditional execution is strictly sequential: the agent reasons, selects a tool, waits for execution, and continues. In complex agent frameworks like _Co-Sight_ or _Open Deep Research_, inference latency accounts for **over 90% of total runtime**.
 
-![LLM](/assets/img/image.png)
+<div align="center">
+  <img src="/assets/img/image.png" alt="alt text" width="25%">
+</div>
 Credits: VectorMine / Getty Images
 
 ### The Core Idea: Speculative Execution for Actions
@@ -35,7 +37,7 @@ Inspired by speculative decoding, **Speculative Tool Calling** decouples tool pr
 3. If the actor's final decision matches the pre-executed tool call, the precomputed result is reused (**cache hit**), eliminating execution latency. If not, the system falls back to normal execution.
 
 <div align="center">
-  <img src="/assets/img/image-1.png" alt="alt text" width="25%">
+  <img src="/assets/img/image-1.png" alt="alt text" width="100%">
 </div>
 Credits: https://medium.com/@genai.works/speed-up-llm-inference-with-speculative-decoding-1fc79701e9d6
 
