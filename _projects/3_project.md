@@ -29,7 +29,7 @@ When trying to teach a model to identify embedded English in code-switched speec
 
 2. **Language Overfitting (Direct CS Finetuning):** Finetuning on code-switched speech causes the model to "over-predict" English, incorrectly hallucinating English even when presented with purely monolingual speech in the native language.
 
-![alt text](image-2.png)
+![alt text](/assets/img/image-2.png)
 
 _Figure 1: Language identification (LID) models are eval-
 uated on a code-switched Hindi–English and a mono-
@@ -75,7 +75,7 @@ $$LR_l = \frac{1}{N} \sum_{i=1}^{N} \frac{1}{r_{i,l}}$$
 ---
 
 <div align="center">
-  <img src="image-3.png" alt="alt text" width="75%">
+  <img src="/assets/img/image-3.png" alt="alt text" width="75%">
 </div>
 *Figure 2: Trade-off between English LangRank (LRen)
 on code-switched vs monolingual non-English speech.

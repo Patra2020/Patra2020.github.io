@@ -34,7 +34,9 @@ Inspired by speculative decoding, **Speculative Tool Calling** decouples tool pr
 2. Simultaneously, the large, accurate **Actor Model** continues its complete reasoning process.
 3. If the actor's final decision matches the pre-executed tool call, the precomputed result is reused (**cache hit**), eliminating execution latency. If not, the system falls back to normal execution.
 
-![Speculative](/assets/img/image-1.png)
+<div align="center">
+  <img src="/assets/img/image-1.png" alt="alt text" width="25%">
+</div>
 Credits: https://medium.com/@genai.works/speed-up-llm-inference-with-speculative-decoding-1fc79701e9d6
 
 ## Central Research Question & Key Findings
