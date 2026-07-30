@@ -435,9 +435,29 @@ ninja.data = [{
           section: "News",},{id: "news-celebrating-my-first-first-author-paper-accepted-at-eacl-findings-2026",
           title: 'Celebrating my first first-author paper, accepted at EACL(Findings) 2026 🎉',
           description: "",
-          section: "News",},{id: "projects-improving-reasoning-of-math-prover-models",
+          section: "News",},{id: "projects-image-to-3d-interactive-worlds",
+          title: 'Image to 3D Interactive Worlds',
+          description: "An agentic framework that lifts a single RGB image + text prompt into a physically simulated, editable Blender scene — UCSD CSE 252D.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/10_project/";
+            },},{id: "projects-convex-resource-allocation-for-efficient-llm-inference",
+          title: 'Convex Resource Allocation for Efficient LLM Inference',
+          description: "Formulating LLM batch scheduling as a convex fluid-flow relaxation — dual variables as interpretable, online bottleneck signals for compute vs. memory pressure.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/11_project/";
+            },},{id: "projects-inverse-rendering-with-gaussian-scene-representations",
+          title: 'Inverse Rendering with Gaussian Scene Representations',
+          description: "Extending single-view inverse rendering with 2D Gaussian Splatting for higher-fidelity relighting and novel view synthesis of indoor scenes — UCSD CSE 274.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/12_project/";
+            },},{id: "projects-urban-seismic-resilience-multi-agent-disaster-response",
+          title: 'Urban Seismic Resilience — Multi-Agent Disaster Response',
+          description: "A from-scratch urban earthquake simulator and LLM-commander multi-agent rescue system — hierarchical coordination achieves up to 7.6× higher survival rates.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/13_project/";
+            },},{id: "projects-improving-reasoning-of-math-prover-models",
           title: 'Improving Reasoning of Math Prover Models',
-          description: "Bridging the gap between formal and informal Math reasoning models — UCSD Rose-STL Lab.",
+          description: "RL (GRPO) training pipeline for robust math-proving LLM verifiers — Qwen-3-4B, Qwen-3.5-4B, and GPT-OSS-20B — UCSD Rose-STL Lab.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
             },},{id: "projects-speculative-tool-invocation-for-faster-llm-reasoning",
@@ -452,12 +472,12 @@ ninja.data = [{
               window.location.href = "/projects/3_project/";
             },},{id: "projects-asr-for-dysarthric-speech",
           title: 'ASR for Dysarthric Speech',
-          description: "Test-time adaptation of Wav2Vec2 for speech pathologies using SUTA, achieving strong WER improvements on dysarthric speakers.",
+          description: "Single-Utterance Test-Time Adaptation (SUTA) for Wav2Vec2, improving ASR word error rate on dysarthric speakers from the TORGO corpus.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/4_project/";
-            },},{id: "projects-dynamic-agentic-rag",
-          title: 'Dynamic Agentic RAG',
-          description: "Gold Medal at InterIIT Tech Meet 13.0 — a LangGraph-based agentic RAG system with critic-generator architecture for multi-hop financial reasoning.",
+            },},{id: "projects-finsight-dynamic-agentic-rag-with-pathway",
+          title: 'FinSight — Dynamic Agentic RAG with Pathway',
+          description: "Gold Medal at Inter-IIT Tech Meet 13.0 — a LangGraph-based multi-agent RAG system built on Pathway&#39;s dynamic vector database for multi-hop financial question answering.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/5_project/";
             },},{id: "projects-rlhf-with-rewrite-feedback",
@@ -465,9 +485,9 @@ ninja.data = [{
           description: "Training reward models on synthetic rewrite-based preference datasets to align LLMs using fine-grained, edit-level human feedback signals.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/6_project/";
-            },},{id: "projects-llama-safety-mechanism-bypass",
-          title: 'Llama Safety Mechanism Bypass',
-          description: "Mechanistic analysis of Llama&#39;s refusal behavior via neuron activation patching and refusal direction discovery, with TAR safety evaluation.",
+            },},{id: "projects-team-weightwatchers-testing-the-tamper-resistance-of-open-weight-llms",
+          title: 'Team WeightWatchers: Testing the Tamper-Resistance of Open-Weight LLMs',
+          description: "Mechanistic analysis of Llama&#39;s refusal behavior via activation patching and refusal-direction ablation — bypassing TAR safety training with an 85%+ attack success rate.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/7_project/";
             },},{id: "projects-graph-based-retrieval-and-contrastive-learning",
