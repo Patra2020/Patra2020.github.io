@@ -34,11 +34,11 @@ We then **replaced the per-pixel formulation with a structured 2D Gaussian Splat
 
 We evaluated on the **Intrinsic Images in the Wild (IIW)** benchmark, measuring **WHDR** (Weighted Human Disagreement Rate, lower = better albedo quality) and **PSNR** (reconstruction fidelity, higher = better):
 
-| Method | WHDR ↓ | PSNR (reconstruction) ↑ |
-|---|---|---|
-| Baseline (image as albedo) | 0.524 | ∞ (trivial) |
-| NIR (per-pixel baseline) | 0.409 | 20.26 |
-| **Gaussian Splatting (ours)** | 0.411 | **48.28** |
+| Method                        | WHDR ↓ | PSNR (reconstruction) ↑ |
+| ----------------------------- | ------ | ----------------------- |
+| Baseline (image as albedo)    | 0.524  | ∞ (trivial)             |
+| NIR (per-pixel baseline)      | 0.409  | 20.26                   |
+| **Gaussian Splatting (ours)** | 0.411  | **48.28**               |
 
 Both methods perform comparably on albedo estimation, but the Gaussian-based representation delivers **dramatically better reconstruction fidelity** (+28 dB PSNR) — structured, scene-level representations propagate far less error than independent per-pixel predictions.
 

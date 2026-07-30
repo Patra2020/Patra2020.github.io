@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 'Team WeightWatchers: Testing the Tamper-Resistance of Open-Weight LLMs'
+title: "Team WeightWatchers: Testing the Tamper-Resistance of Open-Weight LLMs"
 description: Mechanistic analysis of Llama's refusal behavior via activation patching and refusal-direction ablation — bypassing TAR safety training with an 85%+ attack success rate.
 img: assets/img/projects/ww_refusal_ablation.jpeg
 importance: 3
@@ -38,13 +38,13 @@ No weight modification, no fine-tuning — just a rank-1 subtraction applied on 
 
 Despite TAR being explicitly trained to resist hundreds of steps of adversarial fine-tuning, it was never trained to resist an **inference-time, representation-space** intervention. Ablating a single refusal direction achieved a **>85% attack success rate** (LlamaGuard2-assessed) on JailbreakBench, dramatically outperforming much more expensive fine-tuning-based jailbreak baselines while requiring orders of magnitude less compute:
 
-| Condition | Substring-Matching ASR | LlamaGuard2 ASR |
-|---|---|---|
-| Baseline (no intervention) | 22% | 16% |
-| k = 1 direction ablation | **100%** | **85%** |
-| k = 5 direction ablation | 99% | 88% |
+| Condition                  | Substring-Matching ASR | LlamaGuard2 ASR |
+| -------------------------- | ---------------------- | --------------- |
+| Baseline (no intervention) | 22%                    | 16%             |
+| k = 1 direction ablation   | **100%**               | **85%**         |
+| k = 5 direction ablation   | 99%                    | 88%             |
 
-We confirmed the direction is a genuine causal mediator of refusal — not a spurious correlate — by **steering** with it (ActAdd): adding the direction to harmless prompts *induces* refusal, while ablating it from harmful prompts *removes* refusal. We also verified minimal collateral damage to general capability, measuring perplexity/cross-entropy on Alpaca to confirm the intervention doesn't meaningfully degrade the model's benign language modeling.
+We confirmed the direction is a genuine causal mediator of refusal — not a spurious correlate — by **steering** with it (ActAdd): adding the direction to harmless prompts _induces_ refusal, while ablating it from harmful prompts _removes_ refusal. We also verified minimal collateral damage to general capability, measuring perplexity/cross-entropy on Alpaca to confirm the intervention doesn't meaningfully degrade the model's benign language modeling.
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">

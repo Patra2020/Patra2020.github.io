@@ -15,7 +15,7 @@ category: Advanced ML / AI
 
 **My contribution:** implementation of the convex solver simulation using **CVXPY**, and analysis of the duality gap and slack variables across resource regimes.
 
-LLM inference serving is a scheduling problem in disguise: a system receives many concurrent requests, each consuming a growing KV-cache footprint as it generates tokens, and at every iteration must decide which requests to admit into the batch under **two scarce resources** — compute (tokens per forward pass) and memory (KV cache capacity). Existing systems like vLLM and Orca solve the *mechanics* of batching and memory paging extremely well, but still schedule requests via simple FCFS — they don't reason about *which* requests to prioritize. We asked whether that admission decision itself could be posed as a convex program with a provably optimal, interpretable priority rule.
+LLM inference serving is a scheduling problem in disguise: a system receives many concurrent requests, each consuming a growing KV-cache footprint as it generates tokens, and at every iteration must decide which requests to admit into the batch under **two scarce resources** — compute (tokens per forward pass) and memory (KV cache capacity). Existing systems like vLLM and Orca solve the _mechanics_ of batching and memory paging extremely well, but still schedule requests via simple FCFS — they don't reason about _which_ requests to prioritize. We asked whether that admission decision itself could be posed as a convex program with a provably optimal, interpretable priority rule.
 
 ## From Discrete Scheduling to a Convex Program
 
@@ -43,10 +43,10 @@ Here $\lambda_t^{*}$ is the **instantaneous compute price** and $\sum_s \mu_s^{*
 
 We benchmarked the convex relaxation (solved via **CVXPY** with CLARABEL, SCS, and ECOS backends) against an FCFS baseline across six synthetic scenarios spanning the space of compute/memory tightness — from fully unconstrained to doubly-constrained.
 
-- **Non-memory-bound regimes:** the continuous relaxation is *tight* — solvers return zero optimality gap, confirming continuous = discrete whenever memory isn't the binding constraint.
+- **Non-memory-bound regimes:** the continuous relaxation is _tight_ — solvers return zero optimality gap, confirming continuous = discrete whenever memory isn't the binding constraint.
 - **Compute-bound / doubly-constrained regimes:** the convex-guided policy matches or beats FCFS/SJF throughput, achieving **~6% higher throughput**.
 - **Memory-bound regime:** the one place a genuine gap appears. The fluid relaxation can't model the discrete "free the KV-cache the instant a request completes" dynamic — it instead charges memory smoothly over the whole horizon. Our interpolated memory model reduced this gap from **~100% down to 11.5%**, though a residual gap remains because a linear approximation can't fully capture that discrete reclamation event.
 
 ## Takeaway
 
-Convex duality turns out to be a genuinely practical lens for LLM scheduling, not just a theoretical exercise: it gives provable optimality guarantees, automatically recovers the correct heuristic (SRJF vs. fair-sharing) for each resource regime, and — because it only touches the *admission* decision — could plug into existing production engines like vLLM or Sarathi as an admission-control layer on top of their existing PagedAttention memory management, without touching the underlying system at all.
+Convex duality turns out to be a genuinely practical lens for LLM scheduling, not just a theoretical exercise: it gives provable optimality guarantees, automatically recovers the correct heuristic (SRJF vs. fair-sharing) for each resource regime, and — because it only touches the _admission_ decision — could plug into existing production engines like vLLM or Sarathi as an admission-control layer on top of their existing PagedAttention memory management, without touching the underlying system at all.

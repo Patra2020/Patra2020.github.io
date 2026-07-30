@@ -10,7 +10,7 @@ category: Core Research
 **IIT Bombay – CSALT Lab**
 _Advised by [Prof. Preethi Jyothi](https://www.cse.iitb.ac.in/~pjyothi/) (IIT Bombay)_
 
-Automatic speech recognition systems such as Whisper and Wav2Vec2 achieve strong performance on standard benchmarks but degrade sharply on **pathological speech** — dysarthria, stuttering, and other speech disorders that introduce substantial variability in articulation, phonation, and speaking rate. This project studies **Single-Utterance Test-Time Adaptation (SUTA)**: a lightweight, label-free method that adapts a small subset of an ASR model's parameters *at inference time, using only the incoming utterance*, with no fine-tuning data or clinical labels required.
+Automatic speech recognition systems such as Whisper and Wav2Vec2 achieve strong performance on standard benchmarks but degrade sharply on **pathological speech** — dysarthria, stuttering, and other speech disorders that introduce substantial variability in articulation, phonation, and speaking rate. This project studies **Single-Utterance Test-Time Adaptation (SUTA)**: a lightweight, label-free method that adapts a small subset of an ASR model's parameters _at inference time, using only the incoming utterance_, with no fine-tuning data or clinical labels required.
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
@@ -46,14 +46,14 @@ We evaluate on the **TORGO** dysarthric speech corpus — 19 speakers total (8 w
 
 ### Results
 
-| Model | F01 | F03 | M01 | M02 |
-|---|---|---|---|---|
-| Whisper-tiny | 108.0 | 61.0 | 316.0 | 341.0 |
-| Whisper-medium | 86.0 | 57.0 | 69.0 | 236.0 |
-| Whisper-large-v3 | 80.0 | 45.2 | 76.0 | 81.0 |
+| Model             | F01       | F03       | M01        | M02       |
+| ----------------- | --------- | --------- | ---------- | --------- |
+| Whisper-tiny      | 108.0     | 61.0      | 316.0      | 341.0     |
+| Whisper-medium    | 86.0      | 57.0      | 69.0       | 236.0     |
+| Whisper-large-v3  | 80.0      | 45.2      | 76.0       | 81.0      |
 | **SUTA (TTA-10)** | **87.05** | **49.04** | **110.12** | **86.20** |
 
-*WER (%) on non-standard (dysarthric) TORGO speakers.*
+_WER (%) on non-standard (dysarthric) TORGO speakers._
 
 SUTA substantially closes the gap to Whisper-medium/large using only 10 unsupervised adaptation steps and no labeled data — with the largest relative gains on the smallest, cheapest-to-deploy Whisper model, and on control speakers SUTA still improves over Whisper-tiny (though the larger zero-shot models remain stronger there, since control speech already matches their training distribution). Ablating the **feature extractor update** shows it provides additional gains specifically for speakers with more severe articulatory deviation (e.g., M02), confirming that adapting low-level acoustic representations — not just layer-norm scaling — matters for the hardest cases. Across TTA step counts, nearly all of the improvement is captured within the first 3–5 adaptation steps, meaning SUTA can personalize to a new speaker with minimal per-utterance compute overhead — a key property for real-time assistive speech technology.
 

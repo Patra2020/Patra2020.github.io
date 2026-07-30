@@ -61,4 +61,4 @@ Beyond the headline result, we stress-tested the system along three more axes:
 
 ## Takeaway
 
-Centralized, LLM-driven coordination with global situational awareness substantially outperforms decentralized decision-making in multi-agent disaster response — but the real value is in *how* it fails: gracefully, under both communication loss and unexpected new hazards, thanks to agents' local reactive fallback behaviors. This points toward **hybrid coordination** — centralized planning backed by local autonomy — as the right design pattern for resilient disaster-response systems.
+Centralized, LLM-driven coordination with global situational awareness substantially outperforms decentralized decision-making in multi-agent disaster response — but the real value is in _how_ it fails: gracefully, under both communication loss and unexpected new hazards, thanks to agents' local reactive fallback behaviors. This points toward **hybrid coordination** — centralized planning backed by local autonomy — as the right design pattern for resilient disaster-response systems.
