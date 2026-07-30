@@ -16,9 +16,7 @@ pagination:
     after: 3 # The number of links after the current page
 ---
 
-Coming Soon!
-
-<!-- <div class="post">
+<div class="post">
 
 {% assign blog_name_size = site.blog_name | size %}
 {% assign blog_description_size = site.blog_description | size %}
@@ -195,4 +193,4 @@ Coming Soon!
 {% include pagination.liquid %}
 {% endif %}
 
-</div> -->
+</div>
