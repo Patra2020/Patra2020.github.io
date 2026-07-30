@@ -13,7 +13,7 @@ _Advised by [Prof. Preethi Jyothi](https://www.cse.iitb.ac.in/~pjyothi/) (IIT Bo
 
 **Accepted at:** EACL 2026 Findings | **Paper Link:** [ACL Anthology (2026.findings-eacl.242)](https://aclanthology.org/2026.findings-eacl.242/)
 
-## 💡 Overview: The Code-Switching Dilemma
+## Overview: The Code-Switching Dilemma
 
 In multilingual communities, speakers frequently switch between languages within a single conversation or sentence: a phenomenon known as **code-switching**. While state-of-the-art Spoken Language Identification (LID) models perform exceptionally well on purely monolingual speech, they struggle when handling code-switched audio.
 
@@ -21,7 +21,7 @@ Specifically, pretrained LID models often fail to detect **English when spoken w
 
 ---
 
-## ❓ The Core Problem: Why Direct Code-Switched Finetuning Fails
+## The Core Problem: Why Direct Code-Switched Finetuning Fails
 
 When trying to teach a model to identify embedded English in code-switched speech, the obvious baseline is to finetune the model directly on code-switched speech samples. However, this leads to a critical trade-off:
 
@@ -42,7 +42,7 @@ tifies English only when it truly occurs._
 
 ---
 
-## 🎯 Our Key Insight & Proposed Solution
+## Our Key Insight & Proposed Solution
 
 Instead of finetuning on scarce, hard-to-collect code-switched audio, **we finetune pretrained LID models on small amounts of accented English audio** using **Low-Rank Adaptation (LoRA)**.
 
@@ -56,7 +56,7 @@ We build our approach on top of Meta's **Massively Multilingual Speech (MMS-LID)
 
 ---
 
-## 📊 Introducing `LangRank`: Beyond Traditional Metrics
+## Introducing `LangRank`: Beyond Traditional Metrics
 
 Standard evaluation metrics like **Exact Match (EM)** or Accuracy evaluate whether target languages appear in the top $k$ predictions, but they fail to capture rank order and over-prediction errors:
 
@@ -84,7 +84,7 @@ Each subplot corresponds to a different matrix language
 the smallest Euclidean distance to the oracle (davg =
 0.31)*
 
-## 📈 Key Results Across Language Pairs
+## Key Results Across Language Pairs
 
 We evaluated our approach across four diverse code-switching pairs: **Hindi-English (hi-en)**, **Bengali-English (bn-en)**, **Arabic-English (ar-en)**, and **Mandarin-English (zh-en)**.
 
@@ -100,7 +100,7 @@ We evaluated our approach across four diverse code-switching pairs: **Hindi-Engl
 
 ---
 
-## 🚀 Impact & Future Directions
+## Impact & Future Directions
 
 This work demonstrates that **targeted parameter-efficient adaptation using accented monolingual data** is a highly effective, low-resource strategy for improving code-switched LID.
 
@@ -110,7 +110,7 @@ This work demonstrates that **targeted parameter-efficient adaptation using acce
 
 ---
 
-## 📌 Citation
+## Citation
 
 If you find our paper or metric useful in your research, please cite:
 
