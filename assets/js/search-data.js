@@ -467,7 +467,7 @@ ninja.data = [{
               window.location.href = "/projects/2_project/";
             },},{id: "projects-code-switched-speech-language-identification",
           title: 'Code-Switched Speech Language Identification',
-          description: "PEFT-based multilingual speech LID with improved embedded English detection — accepted at EACL 2026.",
+          description: "PEFT-based multilingual speech LID with improved embedded English detection — accepted at EACL 2026 Findings.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_project/";
             },},{id: "projects-asr-for-dysarthric-speech",
@@ -497,7 +497,7 @@ ninja.data = [{
               window.location.href = "/projects/8_project/";
             },},{id: "projects-semantically-cohesive-word-grouping-in-indic-languages",
           title: 'Semantically Cohesive Word Grouping in Indic Languages',
-          description: "Novel word-grouping strategy for cross-lingual syntactic alignment in Indic NLP, improving Hindi-to-Indic MT BLEU by 3.5% — BharatGen, IIT Bombay.",
+          description: "Word-grouping strategy for cross-lingual syntactic alignment in Indic NLP, improving decomposed machine translation across five Hindi-to-Indic language pairs.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/9_project/";
             },},{
