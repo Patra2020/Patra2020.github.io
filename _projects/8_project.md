@@ -7,7 +7,7 @@ importance: 8
 category: Advanced ML / AI
 ---
 
-**Information Retrieval & Representation Learning | IIT Bombay**
+**Information Retrieval & Representation Learning** &nbsp;|&nbsp; **IIT Bombay**
 
 Multi-hop question answering requires retrieving and reasoning over multiple evidence passages whose relevance is often indirect and stance-dependent. This project builds a **graph-of-passages** retrieval architecture where passages are nodes and semantic or co-referential relationships form edges, enabling multi-hop traversal during inference.
 

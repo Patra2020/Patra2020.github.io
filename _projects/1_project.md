@@ -3,7 +3,7 @@ layout: page
 title: Improving Reasoning of Math Prover Models
 description: RL (GRPO) training pipeline for robust math-proving LLM verifiers — Qwen-3-4B, Qwen-3.5-4B, and GPT-OSS-20B — UCSD Rose-STL Lab.
 img: assets/img/projects/ppo_vs_grpo.png
-importance: 5
+importance: 1
 category: Core Research
 ---
 

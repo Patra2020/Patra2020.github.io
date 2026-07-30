@@ -7,7 +7,7 @@ importance: 7
 category: Advanced ML / AI
 ---
 
-**Reinforcement Learning from Human Feedback | IIT Bombay**
+**Reinforcement Learning from Human Feedback** &nbsp;|&nbsp; **IIT Bombay**
 
 Standard RLHF relies on binary preference labels (response A vs. B), which provide weak supervision and are expensive to collect at scale. This project explores a richer feedback signal: **rewrite-based preferences**, where annotators improve a response directly rather than simply ranking two outputs. The delta between original and rewritten responses encodes fine-grained information about what is wrong and how to fix it.
 

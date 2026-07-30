@@ -3,7 +3,7 @@ layout: page
 title: Speculative Tool Invocation for Faster LLM Reasoning
 description: Speculator–Actor architecture for accelerating tool-augmented LLM agents, benchmarked on GAIA — UCSD WukLab.
 img: assets/img/projects/speculative_decoding_draft_target.png
-importance: 4
+importance: 2
 category: Core Research
 ---
 

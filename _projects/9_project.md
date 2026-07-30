@@ -3,11 +3,11 @@ layout: page
 title: Semantically Cohesive Word Grouping in Indic Languages
 description: Word-grouping strategy for cross-lingual syntactic alignment in Indic NLP, improving decomposed machine translation across five Hindi-to-Indic language pairs.
 img: assets/img/projects/decomt_alignment_example.png
-importance: 3
+importance: 9
 category: Core Research
 ---
 
-**IIT Bombay – BharatGen (Nationwide Project) | Jan 2024 – May 2025**  
+**IIT Bombay – BharatGen (Nationwide Project)** &nbsp;|&nbsp; **Jan 2024 – May 2025**  
 _Advised by [Prof. Ganesh Ramakrishnan](https://www.cse.iitb.ac.in/~ganesh/) (IIT Bombay)_
 
 **Authors:** Adyasha Patra, N J Karthika, Nagasai Saketh Naidu, Arnab Bhattacharya, Ganesh Ramakrishnan, Chaitali Dangarikar (IIT Bombay & IIT Kanpur)

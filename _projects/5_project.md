@@ -7,7 +7,7 @@ importance: 1
 category: Advanced ML / AI
 ---
 
-**Inter-IIT Tech Meet 13.0 | Team 24 | Gold Medal**
+**Inter-IIT Tech Meet 13.0** &nbsp;|&nbsp; **Team 24** &nbsp;|&nbsp; **Gold Medal**
 
 FinSight is a domain-specialized, multi-agent Retrieval-Augmented Generation system for financial question answering, built for the Inter-IIT Tech Meet 13.0 problem statement in partnership with **Pathway** — a dynamic vector database designed for real-time, adaptive information retrieval. Unlike a single-pass RAG pipeline, FinSight routes every query through a **LangGraph**-orchestrated agent graph that decomposes complex, multi-hop financial questions, retrieves and grades evidence, reasons from multiple analyst "personas," and computes financial KPIs directly from filings such as 10-Ks — all while tracking hallucination, faithfulness, and citation integrity.
 

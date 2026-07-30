@@ -3,7 +3,7 @@ layout: page
 title: ASR for Dysarthric Speech
 description: Single-Utterance Test-Time Adaptation (SUTA) for Wav2Vec2, improving ASR word error rate on dysarthric speakers from the TORGO corpus.
 img: assets/img/projects/suta_architecture.png
-importance: 2
+importance: 4
 category: Core Research
 ---
 

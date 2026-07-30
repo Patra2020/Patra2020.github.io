@@ -3,11 +3,11 @@ layout: page
 title: Code-Switched Speech Language Identification
 description: PEFT-based multilingual speech LID with improved embedded English detection — accepted at EACL 2026 Findings.
 img: assets/img/projects/codeswitch_lid_finetuning_comparison.png
-importance: 1
+importance: 3
 category: Core Research
 ---
 
-**IIT Bombay | CSALT Lab | Accepted at EACL 2026 Findings**  
+**IIT Bombay** &nbsp;|&nbsp; **CSALT Lab** &nbsp;|&nbsp; **Accepted at EACL 2026 Findings**  
 _Advised by [Prof. Preethi Jyothi](https://www.cse.iitb.ac.in/~pjyothi/) (IIT Bombay)_
 
 **Authors:** Adyasha Patra, Dhiraj Kumar Sah, Preethi Jyothi (IIT Bombay, India)

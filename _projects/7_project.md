@@ -7,7 +7,7 @@ importance: 4
 category: Advanced ML / AI
 ---
 
-**LLM Security & Interpretability | UC San Diego**
+**LLM Security & Interpretability** &nbsp;|&nbsp; **UC San Diego**
 
 **Authors:** Adyasha Patra, Sania Edlabadkar, Zhirui Xia, Stephanie Xu
 
