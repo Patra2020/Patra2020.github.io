@@ -3,7 +3,7 @@ layout: page
 title: Convex Resource Allocation for Efficient LLM Inference
 description: Formulating LLM batch scheduling as a convex fluid-flow relaxation — dual variables as interpretable, online bottleneck signals for compute vs. memory pressure.
 img: assets/img/projects/cse203_dual_variables.png
-importance: 6
+importance: 2
 category: Advanced ML / AI
 ---
 

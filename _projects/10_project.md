@@ -3,7 +3,7 @@ layout: page
 title: Image to 3D Interactive Worlds
 description: An agentic framework that lifts a single RGB image + text prompt into a physically simulated, editable Blender scene — UCSD CSE 252D.
 img: assets/img/projects/cse252d_architecture.png
-importance: 5
+importance: 3
 category: Advanced ML / AI
 ---
 

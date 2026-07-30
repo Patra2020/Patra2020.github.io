@@ -3,7 +3,7 @@ layout: page
 title: Inverse Rendering with Gaussian Scene Representations
 description: Extending single-view inverse rendering with 2D Gaussian Splatting for higher-fidelity relighting and novel view synthesis of indoor scenes — UCSD CSE 274.
 img: assets/img/projects/cse274_teaser.jpeg
-importance: 3
+importance: 5
 category: Advanced ML / AI
 ---
 
