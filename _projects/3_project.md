@@ -1,118 +1,60 @@
 ---
 layout: page
 title: Code-Switched Speech Language Identification
-description: PEFT-based multilingual speech LID with improved embedded English detection — accepted at EACL 2026.
-importance: 3
+description: PEFT-based multilingual speech LID with improved embedded English detection — accepted at EACL 2026 Findings.
+img: assets/img/projects/codeswitch_lid_finetuning_comparison.png
+importance: 1
 category: Core Research
 ---
 
-**IIT Bombay | CSALT Lab | Accepted at EACL 2026**
+**IIT Bombay | CSALT Lab | Accepted at EACL 2026 Findings**  
 _Advised by [Prof. Preethi Jyothi](https://www.cse.iitb.ac.in/~pjyothi/) (IIT Bombay)_
 
 **Authors:** Adyasha Patra, Dhiraj Kumar Sah, Preethi Jyothi (IIT Bombay, India)
 
-**Accepted at:** EACL 2026 Findings | **Paper Link:** [ACL Anthology (2026.findings-eacl.242)](https://aclanthology.org/2026.findings-eacl.242/)
-
-## Overview: The Code-Switching Dilemma
-
-In multilingual communities, speakers frequently switch between languages within a single conversation or sentence: a phenomenon known as **code-switching**. While state-of-the-art Spoken Language Identification (LID) models perform exceptionally well on purely monolingual speech, they struggle when handling code-switched audio.
-
-Specifically, pretrained LID models often fail to detect **English when spoken with the accent of the primary (matrix) language** (e.g., Hindi-accented English, Bengali-accented English, or Arabic-accented English).
-
----
-
-## The Core Problem: Why Direct Code-Switched Finetuning Fails
-
-When trying to teach a model to identify embedded English in code-switched speech, the obvious baseline is to finetune the model directly on code-switched speech samples. However, this leads to a critical trade-off:
-
-1. **Failure to Act (Baseline):** Pretrained models are confused by non-native accents and fail to predict English altogether during code-switching.
-
-2. **Language Overfitting (Direct CS Finetuning):** Finetuning on code-switched speech causes the model to "over-predict" English, incorrectly hallucinating English even when presented with purely monolingual speech in the native language.
-
-![alt text](/assets/img/image-2.png)
-
-_Figure 1: Language identification (LID) models are eval-
-uated on a code-switched Hindi–English and a mono-
-lingual Hindi utterance. (a) Without any finetuning, the
-model does not predict English in a code-switched input.
-(b) Finetuning on code-switched data causes English to
-be mistakenly predicted, even for monolingual Hindi.
-(c) Finetuning on accented English (our proposal) iden-
-tifies English only when it truly occurs._
-
----
-
-## Our Key Insight & Proposed Solution
-
-Instead of finetuning on scarce, hard-to-collect code-switched audio, **we finetune pretrained LID models on small amounts of accented English audio** using **Low-Rank Adaptation (LoRA)**.
-
-### Why Accented English?
-
-- **More Scalable & Accessible:** Public datasets like _Mozilla Common Voice_, _Speech Accent Archive_, and _L2-Arctic_ already contain diverse, accent-labeled English audio.
-
-- **Preserves Monolingual Capabilities:** Training on small subsets (e.g., just 80 utterances) of matrix-language-accented English teaches the model how English sounds when spoken by native speakers of that matrix language, without corrupting its ability to recognize pure monolingual speech.
-
-We build our approach on top of Meta's **Massively Multilingual Speech (MMS-LID)** model (48 Transformer layers, covering 126 languages) using parameter-efficient fine-tuning (PEFT).
-
----
-
-## Introducing `LangRank`: Beyond Traditional Metrics
-
-Standard evaluation metrics like **Exact Match (EM)** or Accuracy evaluate whether target languages appear in the top $k$ predictions, but they fail to capture rank order and over-prediction errors:
-
-- On code-switched speech, EM ignores predictions where English is ranked just outside the top-2.
-
-- On monolingual speech, EM ignores spurious over-predictions of English as long as the matrix language remains #1.
-
-To solve this, we introduce **LangRank (LR)**, a rank-based evaluation metric defined as the reciprocal average rank of a language across all test samples:
-
-$$LR_l = \frac{1}{N} \sum_{i=1}^{N} \frac{1}{r_{i,l}}$$
-
-- **Higher $LR_{en}$ on Code-Switched Speech** $\rightarrow$ Better English detection.
-
-- **Lower $LR_{en}$ on Monolingual Speech** $\rightarrow$ Less spurious over-prediction / overfitting.
-
----
-
-<div align="center">
-  <img src="/assets/img/image-3.png" alt="alt text" width="75%">
+<div class="links mt-2">
+  <a href="https://aclanthology.org/2026.findings-eacl.242/" class="btn btn-sm z-depth-0" role="button" target="_blank">
+    <i class="fa-solid fa-file-lines"></i> ACL Anthology (2026.findings-eacl.242)
+  </a>
 </div>
-*Figure 2: Trade-off between English LangRank (LRen)
-on code-switched vs monolingual non-English speech.
-Each subplot corresponds to a different matrix language
-(Hi, Bn, Ar, Zh). LoRA (green) consistently achieves
-the smallest Euclidean distance to the oracle (davg =
-0.31)*
 
-## Key Results Across Language Pairs
+In multilingual communities, speakers frequently switch between languages within a single conversation or sentence — **code-switching**. State-of-the-art spoken Language Identification (LID) models handle purely monolingual speech well, but fail on code-switched audio: specifically, they struggle to detect **English spoken with the accent of the primary (matrix) language** (Hindi-accented English, Bengali-accented English, Arabic-accented English, and so on).
 
-We evaluated our approach across four diverse code-switching pairs: **Hindi-English (hi-en)**, **Bengali-English (bn-en)**, **Arabic-English (ar-en)**, and **Mandarin-English (zh-en)**.
+<div class="row">
+  <div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/projects/codeswitch_lid_finetuning_comparison.png" title="Three finetuning regimes for code-switched LID" class="img-fluid rounded z-depth-1" %}
+  </div>
+</div>
+<div class="caption">
+  Language identification models evaluated on a code-switched Hindi–English utterance and a monolingual Hindi utterance. Without finetuning, the model never predicts English during code-switching (top-left). Finetuning directly on code-switched data fixes this but causes English to be hallucinated even on monolingual Hindi (bottom-left). Finetuning on <i>accented English</i> instead — our proposal — identifies English only when it truly occurs (right). Figure from our EACL 2026 paper.
+</div>
 
-### The Code-Switched vs. Monolingual Trade-Off
+### The Problem with the Obvious Fix
 
-### Key Findings:
+The natural baseline — fine-tuning directly on code-switched speech — creates a trade-off: without any fine-tuning, pretrained models are confused by non-native accents and simply never predict English during code-switching; fine-tuned directly on code-switched data, the model over-corrects and starts hallucinating English even on purely monolingual native-language speech.
 
-1. **LoRA Strikes the Best Balance:** As shown above, models adapted with **LoRA on 80 accented English samples** achieve the closest proximity to the ideal **Oracle**.
+### Our Approach: Finetune on Accented English, Not Code-Switched Speech
 
-2. **Adapters & Whisper Overfit:** Full adapter modules and baseline Whisper models achieve high Exact Match scores on code-switched data, but severely over-predict English on purely monolingual data.
+Instead of finetuning on scarce, hard-to-collect code-switched audio, we finetune pretrained LID models on **small amounts of accented English audio** using **LoRA**, built on top of Meta's **Massively Multilingual Speech (MMS-LID)** model (48 Transformer layers, 126 languages). Public accent-labeled corpora — Mozilla Common Voice, Speech Accent Archive, L2-Arctic — make this data far more accessible than code-switched speech, and because we're only teaching the model what English _sounds like_ when spoken by native speakers of the matrix language, its monolingual recognition capability stays intact even with as few as **80 training utterances**.
 
-3. **Accent Alignment Matters:** Finetuning on Hindi-accented English significantly improved Hindi-English and Bengali-English LID due to shared phonetic structures, whereas US-accented English provided virtually no improvement.
+### A Better Metric: LangRank
 
----
+Standard metrics like Exact Match ignore rank order and over-prediction errors, so we introduce **LangRank (LR)** — the reciprocal average rank of a language across test samples, $LR_l = \frac{1}{N}\sum_{i=1}^N \frac{1}{r_{i,l}}$ — where a higher $LR_{en}$ on code-switched speech means better English detection, and a lower $LR_{en}$ on monolingual speech means less spurious over-prediction.
 
-## Impact & Future Directions
+<div class="row">
+  <div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/projects/codeswitch_langrank_tradeoff.png" title="LangRank trade-off across four language pairs" class="img-fluid rounded z-depth-1" %}
+  </div>
+</div>
+<div class="caption">
+  Trade-off between code-switched English LangRank and monolingual (spurious) English LangRank across four matrix languages (Hindi, Bengali, Arabic, Mandarin). LoRA-tuned MMS (green) sits consistently closest to the ideal Oracle point, while adapter-based finetuning and baseline Whisper (red/orange) achieve high code-switched detection only by badly over-predicting English on monolingual speech. Figure from our EACL 2026 paper.
+</div>
 
-This work demonstrates that **targeted parameter-efficient adaptation using accented monolingual data** is a highly effective, low-resource strategy for improving code-switched LID.
+### Results Across Four Language Pairs
 
-- **Data-Efficient:** Requires as few as **80 speech samples** and ~4 minutes of GPU training.
+Evaluated on Hindi–English, Bengali–English, Arabic–English, and Mandarin–English: **LoRA on 80 accented-English samples** consistently achieves the smallest Euclidean distance to the oracle trade-off point across all four pairs, while full-adapter finetuning and baseline Whisper achieve high code-switched Exact Match only by severely over-predicting English on monolingual data. Accent alignment matters — finetuning on Hindi-accented English improved both Hindi-English _and_ Bengali-English LID (shared phonetic structure), whereas US-accented English gave virtually no improvement. The whole approach needs as few as 80 speech samples and about **4 minutes of GPU training**.
 
-- **Future Work:** Extending to non-English code-switched pairs, exploring multi-accent mixtures, and integrating acoustic switch-point constraints.
-
----
-
-## Citation
-
-If you find our paper or metric useful in your research, please cite:
+### Citation
 
 ```bibtex
 @inproceedings{patra-etal-2026-improving,
@@ -123,5 +65,4 @@ If you find our paper or metric useful in your research, please cite:
     publisher = "Association for Computational Linguistics",
     url = "https://aclanthology.org/2026.findings-eacl.242/"
 }
-
 ```

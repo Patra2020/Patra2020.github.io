@@ -20,12 +20,6 @@ FinSight is a domain-specialized, multi-agent Retrieval-Augmented Generation sys
   End-to-end workflow: an incoming query passes through safety checking and conversation-history contextualization, then a path decider routes it to a general LLM, web search, decomposer-based RAG agent, persona-based reasoning agent, or a dedicated financial analysis (KPI) agent — each backed by Pathway's vector database. Figure from our Inter-IIT final report.
 </div>
 
-<div class="links mt-2">
-  <a href="{{ '/assets/pdf/projects/finsight_pathway_report.pdf' | relative_url }}" class="btn btn-sm z-depth-0" role="button" target="_blank">
-    <i class="fa-solid fa-file-pdf"></i> Full Technical Report (PDF)
-  </a>
-</div>
-
 ### Why Financial QA Is Hard
 
 Financial documents mix narrative, dense tabular data, and domain-specific terminology, and real analyst queries rarely resolve in a single retrieval step. Some questions decompose in **parallel** (comparing a metric across companies), others in **series** (identifying revenue sources before analyzing their effect on margins), and some **recursively** — a parallel sub-question can itself expand into a dependent chain. Existing systems like BloombergGPT struggle with multimodal (chart/table) inputs, FinGPT suffers from data sparsity on niche topics, and FishNet/FinRobot lack persona-driven, context-sensitive insight generation. FinSight was built specifically to close these gaps.

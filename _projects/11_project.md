@@ -9,7 +9,7 @@ category: Advanced ML / AI
 
 **UC San Diego — CSE 203 (Convex Optimization)**
 
-**Authors:** Satyam Srivastava, Adyasha Patra, Jay Chaudhary, Keshav Gupta
+**Authors:** Adyasha Patra, Satyam Srivastava, Jay Chaudhary, Keshav Gupta
 
 **Report:** [Convex Resource Allocation for Efficient LLM Inference (PDF)](/assets/pdf/projects/cse203_convex_llm_scheduling.pdf)
 

@@ -3,13 +3,13 @@ layout: page
 title: Inverse Rendering with Gaussian Scene Representations
 description: Extending single-view inverse rendering with 2D Gaussian Splatting for higher-fidelity relighting and novel view synthesis of indoor scenes — UCSD CSE 274.
 img: assets/img/projects/cse274_teaser.jpeg
-importance: 7
+importance: 3
 category: Advanced ML / AI
 ---
 
 **UC San Diego — CSE 274 (Advanced Computer Graphics)**
 
-**Authors:** Keshav Gupta, Adyasha Patra
+**Authors:** Adyasha Patra, Keshav Gupta
 
 **Report:** [Inverse Rendering with Gaussian Scene Representations (PDF)](/assets/pdf/projects/cse274_inverse_rendering.pdf)
 

@@ -3,7 +3,7 @@ layout: page
 title: "Team WeightWatchers: Testing the Tamper-Resistance of Open-Weight LLMs"
 description: Mechanistic analysis of Llama's refusal behavior via activation patching and refusal-direction ablation — bypassing TAR safety training with an 85%+ attack success rate.
 img: assets/img/projects/ww_refusal_ablation.jpeg
-importance: 3
+importance: 2
 category: Advanced ML / AI
 ---
 

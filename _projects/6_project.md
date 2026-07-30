@@ -3,7 +3,7 @@ layout: page
 title: RLHF with Rewrite Feedback
 description: Training reward models on synthetic rewrite-based preference datasets to align LLMs using fine-grained, edit-level human feedback signals.
 img: assets/img/projects/rlhf_pipeline.png
-importance: 2
+importance: 7
 category: Advanced ML / AI
 ---
 

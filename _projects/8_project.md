@@ -3,7 +3,7 @@ layout: page
 title: Graph-based Retrieval and Contrastive Learning
 description: Stance-aware sentence transformers and a graph-of-passages architecture for multi-hop QA, trained with contrastive learning objectives.
 img: assets/img/projects/hoprag_graph_passages.png
-importance: 4
+importance: 8
 category: Advanced ML / AI
 ---
 

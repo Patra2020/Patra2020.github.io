@@ -3,7 +3,7 @@ layout: page
 title: Urban Seismic Resilience — Multi-Agent Disaster Response
 description: A from-scratch urban earthquake simulator and LLM-commander multi-agent rescue system — hierarchical coordination achieves up to 7.6× higher survival rates.
 img: assets/img/projects/seismic_survival_rate.png
-importance: 8
+importance: 4
 category: Advanced ML / AI
 ---
 

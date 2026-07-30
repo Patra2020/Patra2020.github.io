@@ -3,11 +3,11 @@ layout: page
 title: ASR for Dysarthric Speech
 description: Single-Utterance Test-Time Adaptation (SUTA) for Wav2Vec2, improving ASR word error rate on dysarthric speakers from the TORGO corpus.
 img: assets/img/projects/suta_architecture.png
-importance: 4
+importance: 2
 category: Core Research
 ---
 
-**IIT Bombay – CSALT Lab**
+**IIT Bombay – CSALT Lab**  
 _Advised by [Prof. Preethi Jyothi](https://www.cse.iitb.ac.in/~pjyothi/) (IIT Bombay)_
 
 Automatic speech recognition systems such as Whisper and Wav2Vec2 achieve strong performance on standard benchmarks but degrade sharply on **pathological speech** — dysarthria, stuttering, and other speech disorders that introduce substantial variability in articulation, phonation, and speaking rate. This project studies **Single-Utterance Test-Time Adaptation (SUTA)**: a lightweight, label-free method that adapts a small subset of an ASR model's parameters _at inference time, using only the incoming utterance_, with no fine-tuning data or clinical labels required.
